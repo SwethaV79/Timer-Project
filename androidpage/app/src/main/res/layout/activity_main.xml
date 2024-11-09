@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6FA"
+    android:padding="10dp">
+
+    <!-- Top title -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay Wallet"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Search bar -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:background="@null"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Search" />
+
+    </LinearLayout>
+
+    <!-- Wallet balance and saved cards -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/wallet_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wallet Balance"
+                android:background="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/saved_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saved Cards"
+                android:background="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Quick actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Actions"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="3"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/scan_qr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Scan QR"
+                    android:drawableLeft="@drawable/ic_scan_qr"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/send_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Send Money"
+                    android:drawableLeft="@drawable/ic_send_money"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/mob_topup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Mob topup"
+                    android:drawableLeft="@drawable/ic_mob_topup"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/add_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Add money"
+                    android:drawableLeft="@drawable/ic_add_money"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/metro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Metro"
+                    android:drawableLeft="@drawable/ic_metro"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/fastag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Fastag"
+                    android:drawableLeft="@drawable/ic_fastag"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/bike_car_insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bike/Car Insurance"
+                    android:drawableLeft="@drawable/ic_bike_car_insurance"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Movies"
+                    android:drawableLeft="@drawable/ic_movies"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/travel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Travel"
+                    android:drawableLeft="@drawable/ic_travel"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/tap_n_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tap n pay"
+                    android:drawableLeft="@drawable/ic_tap_n_pay"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/white"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Points"
+                    android:drawableLeft="@drawable/ic_points"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay_bills"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="11"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_pay_bills"
+                android:text="Pay bills" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <!-- Gift Cards & Vouchers section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gift Cards & Vouchers"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/buy_gc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buy GC"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/all_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All Cards"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/vouchers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vouchers"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/gifts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gifts"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom navigation bar -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:drawableLeft="@drawable/ic_home"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/transactions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transactions"
+            android:drawableLeft="@drawable/ic_transactions"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/rewards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rewards"
+            android:drawableLeft="@drawable/ic_rewards"
+            android:background="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

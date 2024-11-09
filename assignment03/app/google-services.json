@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "484318829653",
+    "project_id": "assignment03-eddb7",
+    "storage_bucket": "assignment03-eddb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484318829653:android:fa2999b38224793e0408dc",
+        "android_client_info": {
+          "package_name": "com.example.assignment03"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSFou3mSMVHgcXCq_14S8m-TpAK3cMt4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
