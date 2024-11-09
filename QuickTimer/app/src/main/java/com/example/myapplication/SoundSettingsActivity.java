@@ -1,24 +1,34 @@
-package com.example.myapplication;
+package com.example.quicktimer;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SoundSettingsActivity extends AppCompatActivity {
 
-    private ListView soundListView;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound_settings);
 
-        soundListView = findViewById(R.id.soundListView);
+        Button sound1Button = findViewById(R.id.sound1Button);
+        Button sound2Button = findViewById(R.id.sound2Button);
+        Button sound3Button = findViewById(R.id.sound3Button);
 
-        // Populate the list of available sounds
-        String[] soundOptions = {"Sound 1", "Sound 2", "Sound 3"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, soundOptions);
-        soundListView.setAdapter(adapter);
+        sound1Button.setOnClickListener(v -> playSound(R.raw.sound1));
+        sound2Button.setOnClickListener(v -> playSound(R.raw.sound2));
+        sound3Button.setOnClickListener(v -> playSound(R.raw.sound3));
+    }
+
+    private void playSound(int soundId) {
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        mediaPlayer = MediaPlayer.create(this, soundId);
+        mediaPlayer.start();
     }
 }
