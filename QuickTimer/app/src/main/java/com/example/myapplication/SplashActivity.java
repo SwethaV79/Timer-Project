@@ -1,4 +1,4 @@
-package com.example.quicktimer;
+package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,12 +6,13 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Splash screen delay (2 seconds)
+        // Delay of 2 seconds before moving to HomeActivity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -19,6 +20,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000); // 2000ms = 2 seconds
+        }, 2000);
     }
 }

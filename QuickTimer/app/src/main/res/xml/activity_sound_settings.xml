@@ -2,23 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
 
     <Button
-        android:id="@+id/sound1Button"
+        android:id="@+id/sound1_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sound 1" />
+        android:text="Sound 1"
+        android:onClick="previewSound"/>
 
     <Button
-        android:id="@+id/sound2Button"
+        android:id="@+id/sound2_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sound 2" />
+        android:text="Sound 2"
+        android:onClick="previewSound"/>
 
     <Button
-        android:id="@+id/sound3Button"
+        android:id="@+id/sound3_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sound 3" />
+        android:text="Sound 3"
+        android:onClick="previewSound"/>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.quicktimer;
+package com.example.myapplication;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -14,21 +14,23 @@ public class SoundSettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound_settings);
-
-        Button sound1Button = findViewById(R.id.sound1Button);
-        Button sound2Button = findViewById(R.id.sound2Button);
-        Button sound3Button = findViewById(R.id.sound3Button);
-
-        sound1Button.setOnClickListener(v -> playSound(R.raw.sound1));
-        sound2Button.setOnClickListener(v -> playSound(R.raw.sound2));
-        sound3Button.setOnClickListener(v -> playSound(R.raw.sound3));
     }
 
-    private void playSound(int soundId) {
+    // Function to play preview of sound
+    public void previewSound(View view) {
         if (mediaPlayer != null) {
             mediaPlayer.release();
         }
-        mediaPlayer = MediaPlayer.create(this, soundId);
+        int soundResId = R.raw.sound1; // Default sound
+        switch (view.getId()) {
+            case R.id.sound2_button:
+                soundResId = R.raw.sound2;
+                break;
+            case R.id.sound3_button:
+                soundResId = R.raw.sound3;
+                break;
+        }
+        mediaPlayer = MediaPlayer.create(this, soundResId);
         mediaPlayer.start();
     }
 }

@@ -1,61 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- Timer Display -->
-    <TextView
-        android:id="@+id/timerDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00:00:00"
-        android:textSize="40sp"
-        android:layout_centerInParent="true"/>
-
-    <!-- Input Fields for Timer -->
-    <EditText
-        android:id="@+id/hoursInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timerDisplay"
-        android:hint="Hours"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/minutesInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/hoursInput"
-        android:hint="Minutes"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/secondsInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/minutesInput"
-        android:hint="Seconds"
-        android:inputType="number" />
-
-    <!-- Control Buttons -->
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_below="@id/hoursInput"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
 
     <Button
-        android:id="@+id/pauseButton"
+        android:id="@+id/timer_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pause"
-        android:layout_below="@id/startButton"/>
+        android:text="Start Timer"
+        android:onClick="openTimerScreen"/>
 
     <Button
-        android:id="@+id/resetButton"
+        android:id="@+id/sound_settings_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
-        android:layout_below="@id/pauseButton"/>
-</RelativeLayout>
+        android:text="Sound Settings"
+        android:onClick="openSoundSettings"/>
+
+    <Button
+        android:id="@+id/history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer History"
+        android:onClick="openTimerHistory"/>
+</LinearLayout>
